@@ -11,10 +11,10 @@
 #define FUNCTION 5
 
 // Behavior Overrides
-&lt {
-    tapping-term-ms = <200>;
-    flavor = "hold-preferred";
-};
+/* &lt { */
+/*     tapping-term-ms = <200>; */
+/*     flavor = "hold-preferred"; */
+/* }; */
 
 / {
     macros {
@@ -125,6 +125,7 @@
                 &kp B      &kp L      &kp D       &kp W       &kp Z             &kp J        &kp F       &kp O       &kp U      &kp SEMI  
                 &mt LGUI N &mt LALT R &mt LCTRL T &mt LSHFT S &kp G             &kp Y        &mt RSHFT H &mt RCTRL A &mt RALT E &mt RGUI I
                 &kp Q      &kp X      &kp M       &kp C       &kp V             &kp K        &kp P       &kp COMMA   &kp DOT    &kp FSLH  
+                /* &studio_unlock     &lt 3 BSPC        &lt 2 SPACE  &kp ENTER */
                 &kp ESC     &lt 3 BSPC        &lt 2 SPACE  &kp ENTER
             >;
         };
@@ -152,7 +153,7 @@
         code_layer {
             display-name = "Navigation"; // 3
             bindings = <
-                        &tog 1        &none     &sl 6     &sl 5          &sl 4          &none        &kp PG_UP        &kp HOME  &kp END   &none        
+                        &tog 1        &studio_unlock     &sl 6     &sl 5          &sl 4          &none        &kp PG_UP        &kp HOME  &kp END   &none        
                         &td_gui       &td_alt   &td_ctrl  &td_shift      &kp PSCRN      &kp LEFT     &kp DOWN         &kp UP    &kp RIGHT &none        
                         &kp DEL       &kp SPACE &kp ENTER &key_repeat    &kp LC(LS(V))  &none        &kp PG_DN        &none     &none     &none        
                         &trans         &trans         &trans       &trans
