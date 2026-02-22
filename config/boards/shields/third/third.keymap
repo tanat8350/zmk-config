@@ -38,13 +38,67 @@
         };
     };
 
+    // 1  2  3  4  5       6  7  8  9  10
+    // 11 12 13 14 15      16 17 18 19 20
+    // 21 22 23 24 25      26 27 28 29 30
+    //          31 32      33 34
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
+        grave {
             timeout-ms = <50>;
-            key-positions = <12 13>; // Positions for 'A' and 'S'
-            bindings = <&kp ESC>;
+            key-positions = <2 3>;
+            bindings = <&kp GRAVE>;
+            layers = <0>;
+        };
+
+        tilde {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp TILDE>;
+            layers = <0>;
+        };
+
+        minus {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp MINUS>;
+            layers = <0>;
+        };
+
+        under {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp UNDER>;
+            layers = <0>;
+        };
+
+        capword {
+            timeout-ms = <50>;
+            key-positions = <14 17>;
+            bindings = <&cap_word>;
+            layers = <0>;
+        };
+
+        caplock {
+            timeout-ms = <50>;
+            key-positions = <4 7>;
+            bindings = <&kp CAPS>;
+            layers = <0>;
+        };
+
+        caplock {
+            timeout-ms = <50>;
+            key-positions = <4 7>;
+            bindings = <&kp CAPS>;
+            layers = <0>;
+        };
+
+        studio_unlock {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&studio_unlock>;
+            layers = <4>;
         };
     };
 
@@ -115,68 +169,73 @@
             bindings = <&sk LCTRL>, <&kp LCTRL>;
         };
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
-        mac_default_layer {
-            display-name = "Modded Graphite"; // 0
+        // 0
+        graphite {
+            display-name = "Modded Graphite";
             bindings = <
-                &kp B      &kp L      &kp D       &kp W       &kp Z             &kp J        &kp F       &kp O       &kp U      &kp SEMI  
+                &kp B      &kp L      &kp D       &kp W       &kp Z             &kp J        &kp F       &kp O       &kp U      &kp SEMI
                 &mt LGUI N &mt LALT R &mt LCTRL T &mt LSHFT S &kp G             &kp Y        &mt RSHFT H &mt RCTRL A &mt RALT E &mt RGUI I
-                &kp Q      &kp X      &kp M       &kp C       &kp V             &kp K        &kp P       &kp COMMA   &kp DOT    &kp FSLH  
-                /* &studio_unlock     &lt 3 BSPC        &lt 2 SPACE  &kp ENTER */
-                &kp ESC     &lt 3 BSPC        &lt 2 SPACE  &kp ENTER
+                &kp Q      &kp X      &kp M       &kp C       &kp V             &kp K        &kp P       &kp COMMA   &kp DOT    &kp FSLH
+                &kp ESC    &lt 3 BSPC &lt 2 SPACE &kp ENTER
             >;
         };
 
-        windows_default_layer {
-            display-name = "Qwerty"; // 1
+        // 1
+        qwerty {
+            display-name = "Qwerty";
             bindings = <
-                &kp Q      &kp W      &kp E       &kp R       &kp T             &kp Y        &kp U       &kp I       &kp U      &kp P        
+                &kp Q      &kp W      &kp E       &kp R       &kp T             &kp Y        &kp U       &kp I       &kp U      &kp P
                 &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G             &kp H        &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SEMI
-                &kp Z      &kp X      &kp C       &kp V       &kp B             &kp N        &kp M       &kp COMMA   &kp DOT    &kp FSLH     
-                &trans      &trans            &trans       &trans
+                &kp Z      &kp X      &kp C       &kp V       &kp B             &kp N        &kp M       &kp COMMA   &kp DOT    &kp FSLH
+                &trans     &trans     &trans      &trans
             >;
         };
 
-        gaming_layer {
-            display-name = "Symbol"; // 2
+        // 2
+        symbol {
+            display-name = "Symbol";
             bindings = <
-                &kp EXCL    &kp AT      &kp HASH     &kp DLLR     &kp PRCNT      &kp AMPS &kp CARET       &kp ASTRK     &kp LBRC      &kp RBRC     
+                &kp EXCL    &kp AT      &kp HASH     &kp DLLR     &kp PRCNT      &kp AMPS &kp CARET       &kp ASTRK     &kp LBRC      &kp RBRC
                 &mt LGUI N3 &mt LALT N2 &mt LCTRL N1 &mt LSHFT N0 &kp N9         &kp BSLH &mt RSHFT EQUAL &mt RCTRL SQT &mt RALT LPAR &mt RGUI RPAR
-                &kp N4      &kp N5      &kp N6       &kp N7       &kp N8         &kp PIPE &kp PLUS        &kp DQT       &kp LBKT      &kp RBKT     
+                &kp N4      &kp N5      &kp N6       &kp N7       &kp N8         &kp PIPE &kp PLUS        &kp DQT       &kp LBKT      &kp RBKT
                 &trans       &trans         &trans   &trans
             >;
         };
 
-        code_layer {
-            display-name = "Navigation"; // 3
+        // 3
+        nav {
+            display-name = "Navigation";
             bindings = <
-                        &tog 1        &studio_unlock     &sl 6     &sl 5          &sl 4          &none        &kp PG_UP        &kp HOME  &kp END   &none        
-                        &td_gui       &td_alt   &td_ctrl  &td_shift      &kp PSCRN      &kp LEFT     &kp DOWN         &kp UP    &kp RIGHT &none        
-                        &kp DEL       &kp SPACE &kp ENTER &key_repeat    &kp LC(LS(V))  &none        &kp PG_DN        &none     &none     &none        
-                        &trans         &trans         &trans       &trans
+                &tog 1  &studio_unlock &sl 6     &sl 5       &sl 4              &none    &kp PG_UP &kp HOME &kp END   &none
+                &td_gui &td_alt        &td_ctrl  &td_shift   &kp PSCRN          &kp LEFT &kp DOWN  &kp UP   &kp RIGHT &none
+                &kp DEL &kp SPACE      &kp ENTER &key_repeat &kp LC(LS(V))      &none    &kp PG_DN &none    &none     &none
+                &trans  &trans         &trans    &trans
             >;
         };
 
-        number_layer {
-            display-name = "Media and mouse"; // 4
+        // 4
+        media {
+            display-name = "Media and mouse";
             bindings = <
-                &kp F1  &kp F2     &kp F3       &kp F4       &kp F5        &kp F6         &kp F7         &kp F8       &kp F9          &kp F10
-                &none   &kp C_PP   &kp C_PREV   &kp C_NEXT   &none         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &none  
-                &kp F12 &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none         &mkp MB4       &kp PG_DN      &kp PG_UP    &kp MB5         &kp F11
+                &kp F1  &kp F2     &kp F3       &kp F4       &kp F5      &kp F6         &kp F7         &kp F8       &kp F9          &kp F10
+                &none   &kp C_PP   &kp C_PREV   &kp C_NEXT   &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &none
+                &kp F12 &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none       &mkp MB4       &kp PG_DN      &kp PG_UP    &kp MB5         &kp F11
                 &none        &none         &mkp MB1       &mkp MB2
             >;
         };
 
-        function_layer {
-            display-name = "One hand Graphite"; // 5
+        // 5
+        oh_graphite {
+            display-name = "One hand Graphite";
             bindings =<
-                &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &none  &none  &to GAME  &to MAC  &to WINDOWS
-                &kp F1       &kp F2         &kp F3       &kp F4       &kp F5        &kp 6  &kp F7 &kp F8 &kp F9        &kp F10    
-                &kp F11      &studio_unlock &bt BT_CLR   &bootloader  &none         &none  &none  &none  &none         &kp F12    
-                &trans       &trans        &trans &trans
+                &kp SEMI &kp U     &kp O     &kp F &kp J      &none &none &none &none &none
+                &kp I    &kp E     &kp A     &kp H &kp Y      &none &none &none &none &none
+                &kp FSLH &kp DOT   &kp COMMA &kp P &kp K      &none &none &none &none &none
+                &none    &kp LCTRL &none     &none
             >;
         };
 
@@ -187,13 +246,14 @@
             /*     &trans &trans       &trans         &trans       &trans       &trans        &trans &trans &trans &trans        &trans      &trans */
             /* >; */
 
-        oh_num_layer {
-            display-name = "One hand Number"; // 6
+        // 6
+        oh_num {
+            display-name = "One hand Number";
             bindings =<
-                &none        &none          &none        &none        &none         &none  &none  &none  &none  &none
-                &kp N3       &kp N2         &kp N1       &kp N0       &kp N9        &none  &none  &none  &none  &none
-                &kp N4       &kp N5         &kp N6       &kp N7       &kp N8        &none  &none  &none  &none  &none
-                &tog 6       &kp BSPC      &none  &none
+                &none  &none    &none  &none  &none       &none &none &none &none &none
+                &kp N3 &kp N2   &kp N1 &kp N0 &kp N9      &none &none &none &none &none
+                &kp N4 &kp N5   &kp N6 &kp N7 &kp N8      &none &none &none &none &none
+                &tog 6 &kp BSPC &none  &none
             >;
         };
     };
