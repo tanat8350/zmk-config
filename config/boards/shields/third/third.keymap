@@ -47,51 +47,58 @@
 
         grave {
             timeout-ms = <50>;
-            key-positions = <2 3>;
+            key-positions = <1 2>;
             bindings = <&kp GRAVE>;
             layers = <0>;
         };
 
         tilde {
             timeout-ms = <50>;
-            key-positions = <22 23>;
+            key-positions = <21 22>;
             bindings = <&kp TILDE>;
             layers = <0>;
         };
 
         minus {
             timeout-ms = <50>;
-            key-positions = <8 9>;
+            key-positions = <7 8>;
             bindings = <&kp MINUS>;
             layers = <0>;
         };
 
         under {
             timeout-ms = <50>;
-            key-positions = <28 29>;
+            key-positions = <27 28>;
             bindings = <&kp UNDER>;
             layers = <0>;
         };
 
         caps_word {
             timeout-ms = <50>;
-            key-positions = <14 17>;
+            key-positions = <13 16>;
             bindings = <&caps_word>;
             layers = <0>;
         };
 
         caps_lock {
             timeout-ms = <50>;
-            key-positions = <4 7>;
+            key-positions = <3 6>;
             bindings = <&kp CAPS>;
             layers = <0>;
         };
 
         studio_unlock {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <0 1>;
             bindings = <&studio_unlock>;
             layers = <4>;
+        };
+
+        l4 {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&mo 4>;
+            layers = <0>;
         };
     };
 
