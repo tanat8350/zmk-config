@@ -99,7 +99,7 @@
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap";
@@ -211,7 +211,7 @@
                 &kp EXCL    &kp AT      &kp HASH     &kp DLLR     &kp PRCNT      &kp AMPS &kp CARET       &kp ASTRK     &kp LBRC      &kp RBRC
                 &mt LGUI N3 &mt LALT N2 &mt LCTRL N1 &mt LSHFT N0 &kp N9         &kp BSLH &mt RSHFT EQUAL &mt RCTRL SQT &mt RALT LPAR &mt RGUI RPAR
                 &kp N4      &kp N5      &kp N6       &kp N7       &kp N8         &kp PIPE &kp PLUS        &kp DQT       &kp LBKT      &kp RBKT
-                &trans       &trans         &trans   &trans
+                &kp TAB     &trans         &trans   &trans
             >;
         };
 
@@ -265,5 +265,10 @@
                 &tog 6 &kp BSPC &none  &none
             >;
         };
+
+        extra {
+            status = "reserved";
+        };
+
     };
 };
