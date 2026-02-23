@@ -217,7 +217,7 @@
 
         // 3
         nav {
-            display-name = "Navigation and one shot";
+            display-name = "Nav and one shot";
             bindings = <
                 &tog 1  &studio_unlock &sl 6     &sl 5       &sl 4              &none    &kp PG_UP &kp HOME &kp END   &none
                 &td_gui &td_alt        &td_ctrl  &td_shift   &kp PSCRN          &kp LEFT &kp DOWN  &kp UP   &kp RIGHT &none
