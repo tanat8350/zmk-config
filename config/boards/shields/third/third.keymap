@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 // https://zmk.dev/docs/keymaps/behaviors/mouse-emulation
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200 //d 1200
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 2400 //d 1200
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -264,7 +264,7 @@
         // 5
         /* https://zmk.dev/docs/keymaps/behaviors/bluetooth */
         oh_graphite {
-            display-name = "One hand Graphite and bluetooth";
+            display-name = "OH Graphite and BT";
             bindings =<
 //        ┌───┬───┬───┬─────┬──────┐   ┌────────┬──────────┬──────────┬──────────┬──────────┐
 //        │ ; │ U │ O │  F  │  J   │   │        │          │          │          │          │
@@ -284,7 +284,7 @@
 
         // 6
         oh_num {
-            display-name = "One hand Number";
+            display-name = "OH Number";
             bindings =<
 //        ┌─────┬─────┬─────┬───────┬──────┐   ┌─────┬─────┬─────┬─────┬─────┐
 //        │     │     │     │       │      │   │     │     │     │     │     │
