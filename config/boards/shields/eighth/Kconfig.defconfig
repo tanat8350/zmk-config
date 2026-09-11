@@ -1,0 +1,16 @@
+if SHIELD_EIGHTH_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "TN Eighth"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_EIGHTH_LEFT || SHIELD_EIGHTH_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

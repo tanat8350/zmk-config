@@ -1,0 +1,5 @@
+config SHIELD_EIGHTH_LEFT
+    def_bool $(shields_list_contains,eighth_left)
+
+config SHIELD_EIGHTH_RIGHT
+    def_bool $(shields_list_contains,eighth_right)

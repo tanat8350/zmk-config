@@ -241,19 +241,19 @@
         oh_graphite {
             display-name = "OH Graphite and BT";
             bindings =<
-//        ┌───┬───┬───┬─────┬──────┐   ┌────────┬──────────┬──────────┬──────────┬──────────┐
-//        │ ; │ U │ O │  F  │  J   │   │        │          │          │          │          │
-//        ├───┼───┼───┼─────┼──────┤   ├────────┼──────────┼──────────┼──────────┼──────────┤
-//        │ I │ E │ A │  H  │  Y   │   │ bt_clr │ bt_sel 0 │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │
-//        ├───┼───┼───┼─────┼──────┤   ├────────┼──────────┼──────────┼──────────┼──────────┤
-//        │ / │ . │ , │  P  │  K   │   │        │ bt_sel 4 │          │          │          │
-//        └───┴───┴───┼─────┼──────┤   ├────────┼──────────┼──────────┴──────────┴──────────┘
-//                    │     │ lctl │   │        │          │
-//                    └─────┴──────┘   └────────┴──────────┘
-      &kp SEMI   &kp U     &kp O       &kp F   &kp J           &none        &none          &none          &none          &none
-      &kp I      &kp E     &kp A       &kp H   &kp Y           &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3
-      &kp FSLH   &kp DOT   &kp COMMA   &kp P   &kp K           &none        &bt BT_SEL 4   &none          &none          &none
-                                       &none   &kp LCTRL       &none        &none
+//        ┌───┬───┬───┬───────┬──────┐   ┌────────┬──────────┬──────────┬──────────┬──────────┐
+//        │ ; │ U │ O │   F   │  J   │   │        │          │          │          │          │
+//        ├───┼───┼───┼───────┼──────┤   ├────────┼──────────┼──────────┼──────────┼──────────┤
+//        │ I │ E │ A │   H   │  Y   │   │ bt_clr │ bt_sel 0 │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │
+//        ├───┼───┼───┼───────┼──────┤   ├────────┼──────────┼──────────┼──────────┼──────────┤
+//        │ / │ . │ , │   P   │  K   │   │        │ bt_sel 4 │          │          │          │
+//        └───┴───┴───┼───────┼──────┤   ├────────┼──────────┼──────────┴──────────┴──────────┘
+//                    │ tog 5 │ lctl │   │        │          │
+//                    └───────┴──────┘   └────────┴──────────┘
+      &kp SEMI   &kp U     &kp O       &kp F    &kp J           &none        &none          &none          &none          &none
+      &kp I      &kp E     &kp A       &kp H    &kp Y           &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3
+      &kp FSLH   &kp DOT   &kp COMMA   &kp P    &kp K           &none        &bt BT_SEL 4   &none          &none          &none
+                                       &tog 5   &kp LCTRL       &none        &none
             >;
         };
 
