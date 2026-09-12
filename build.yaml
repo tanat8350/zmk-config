@@ -18,21 +18,22 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
+# NOTE: `nice_nano` (without `_v2`) battery will not show
 # include:
-#     - board: nice_nano
-#       shield: third_left
-#       snippet: studio-rpc-usb-uart
-#       cmake-args: -DCONFIG_ZMK_STUDIO=y
-#     - board: nice_nano
-#       shield: third_right
+#   - board: nice_nano_v2
+#     shield: third_left
+#     snippet: studio-rpc-usb-uart
+#     cmake-args: -DCONFIG_ZMK_STUDIO=y
+#   - board: nice_nano_v2
+#     shield: third_right
 
 # - board: nice_nano
 #   shield: settings_reset
 
 include:
-  - board: nice_nano
+  - board: nice_nano_v2
     shield: eighth_left
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: nice_nano
+  - board: nice_nano_v2
     shield: eighth_right
